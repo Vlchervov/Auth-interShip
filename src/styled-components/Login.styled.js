@@ -61,12 +61,13 @@ export const AboutAccount = styled.div`
 
 export const MainTitle = styled.h1`
   position: absolute;
-  font-size: 41px;
-  top: 32.8vh;
-  left: 44.4vw;
+  font-size: 40px;
+  top: 33.2vh;
+  left: 44.2vw;
   font-weight: bold;
   color: #333333;
-
+  font-family: "Avenir Next";
+  letter-spacing: 1.06px;
   span {
     color: #58fa58;
   }
@@ -78,19 +79,13 @@ export const AuthForm = styled.form`
   top: 43vh;
   left: 38.4vw;
   width: 23.3vw;
-  height: 310px;
+  transform: translate(50%, 0, 50%);
   background-color: #ffffff;
 
   i {
-    position: absolute;
     color: #fe2e2e;
     font-size: 14px;
-    top: 3.5vh;
-    padding-top: 50px;
-    padding: 40px 39px;
     font-family: "Avenir Next";
-    font-weight: normal;
-    font-style: normal;
   }
 
   p {
@@ -105,42 +100,21 @@ export const AuthForm = styled.form`
   }
 
   input[type="text"] {
-    background: #f5f7fa;
-    position: absolute;
-    top: 2.9vh;
-    left: 2.1vw;
-    height: 5.1vh;
-    border-radius: 4px;
-    box-sizing: border-box;
     border: 1px solid #c9d6f0;
-    width: 19vw;
-    z-index: 10;
-    padding: 14px 14px;
-
-    ::placeholder {
-      color: #798bad;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      font-family: "Avenir Next";
-    }
   }
 
   input.listItemError {
     border: 1px solid #f06060;
   }
 
-  input[type="password"] {
-    background: #f5f7fa;
-    position: absolute;
-    top: 10vh;
-    left: 2.1vw;
-    width: 19vw;
-    height: 5.3vh;
-    border: 1px solid #c9d6f0;
+  input[type="text"] {
+    display: block;
     border-radius: 4px;
-    box-sizing: border-box;
-    padding: 14px 14px;
+    margin: 20px auto 10px;
+    margin-top: 38px;
+    padding: 16px 12px;
+    width: 341px;
+    outline: none;
 
     ::placeholder {
       font-size: 14px;
@@ -151,29 +125,44 @@ export const AuthForm = styled.form`
     }
   }
 
-  label {
-    position: absolute;
-    top: 16.2vh;
-    font-family: "Avenir Next";
+  input[type="password"] {
+    display: block;
+    border-radius: 4px;
+    margin-left: 40px;
+    padding: 16px 16px;
+    width: 333px;
+    margin-top: 12px;
+  }
+
+  input[type="password"] {
+    border: 1px solid #c9d6f0;
+  }
+
+  /* label {
+    display: block;
+    margin: 0px 63px 50px;
     font-style: normal;
     font-size: 14px;
     font-weight: normal;
-    left: 3.38vw;
-    line-height: 100%;
-  }
+
+  } */
 
   input[type="checkbox"] {
-    position: absolute;
-    top: 16vh;
-    left: 1.9vw;
+    margin: 11px 42px 0px;
+    margin-right: 12px;
+  }
+
+  label {
+    position: relative;
+    bottom: 3px;
+    font-size: 14px;
   }
 
   input[type="submit"] {
-    position: absolute;
-    top: 19.8vh;
+    margin: 15px auto 10px;
+    padding: 14px;
+    display: block;
     width: 19vw;
-    height: 5vh;
-    left: 2.1vw;
     color: #333333;
     font-weight: 500;
     font-size: 16px;
@@ -185,10 +174,8 @@ export const AuthForm = styled.form`
   }
 
   h5 {
-    position: absolute;
-    top: 23.47vh;
-    color: #000000;
-    left: 2.1vw;
+    margin: 10px 40px 40px;
+    display: block;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;

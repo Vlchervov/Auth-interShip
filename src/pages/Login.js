@@ -14,7 +14,6 @@ const Login = () => {
     register,
     handleSubmit,
     setValue,
-    getValues,
     formState: { errors },
   } = useForm();
   const postLoginApiUrl = "http://clinic.studio-mind.ru/login";
@@ -145,7 +144,7 @@ const Login = () => {
           <label>Запомнить меня</label>
           <input type="submit" value="Войти"></input>
           <h5>
-            Ещё не зарегестрированы?{" "}
+            Ещё не зарегистрированы?{" "}
             <span
               onClick={() => {
                 setState(true);
@@ -157,65 +156,65 @@ const Login = () => {
         </AuthForm>
       ) : (
         <>
-        <MainTitleRegister>
-        ClinicTrack<span>.</span>
-      </MainTitleRegister>
-        <RegistrationForm
-          onSubmit={handleSubmit(onRegistrationUser)}
-          onChange={() => {
-            if (setValue.length > 1) {
-              setIsRegisterError("");
-            }
-          }}
-        >
-          <input
-            {...register("newEmail", {
-              required: "Обязательное поле",
-              pattern: { value: /@/, message: "Неверный формат E-mail" },
-            })}
-            type="email"
-            placeholder="E-mail"
-          ></input>
-          {/* {errors.newEmail?.message && <i>{errors.newEmail?.message}</i>} */}
-          <input
-            {...register("newUserName", { required: "Обязательное поле" })}
-            placeholder="Имя пользователя"
-            type="text"
-          ></input>
-          <input
-            {...register("firstName", { required: "Обязательное поле" })}
-            placeholder="Имя"
-            type="text"
-          ></input>
-          <input
-            {...register("lastName", { required: "Обязательное поле" })}
-            placeholder="Фамилия"
-            type="text"
-          ></input>
-          <input
-            {...register("newPassword", { required: true })}
-            placeholder="Пароль"
-            type="password"
-          ></input>
-          <input
-            {...register("confirmPassword", { required: true })}
-            placeholder="Подтверждение пароля"
-            type="password"
-          ></input>
-          {isRegisterError && <p>{isRegisterError}</p>}
-          {postRegisterError && <i>{postRegisterError}</i>}
-          <button>Зарегистрироваться</button>
-          <h5>
-            Уже есть аккаунт?{" "}
-            <span
-              onClick={() => {
-                setState(false);
-              }}
-            >
-              Войти
-            </span>
-          </h5>
-        </RegistrationForm>
+          <MainTitleRegister>
+            ClinicTrack<span>.</span>
+          </MainTitleRegister>
+          <RegistrationForm
+            onSubmit={handleSubmit(onRegistrationUser)}
+            onChange={() => {
+              if (setValue.length > 1) {
+                setIsRegisterError("");
+              }
+            }}
+          >
+            <input
+              {...register("newEmail", {
+                required: "Обязательное поле",
+                pattern: { value: /@/, message: "Неверный формат E-mail" },
+              })}
+              type="email"
+              placeholder="E-mail"
+            ></input>
+            {/* {errors.newEmail?.message && <i>{errors.newEmail?.message}</i>} */}
+            <input
+              {...register("newUserName", { required: "Обязательное поле" })}
+              placeholder="Имя пользователя"
+              type="text"
+            ></input>
+            <input
+              {...register("firstName", { required: "Обязательное поле" })}
+              placeholder="Имя"
+              type="text"
+            ></input>
+            <input
+              {...register("lastName", { required: "Обязательное поле" })}
+              placeholder="Фамилия"
+              type="text"
+            ></input>
+            <input
+              {...register("newPassword", { required: true })}
+              placeholder="Пароль"
+              type="password"
+            ></input>
+            <input
+              {...register("confirmPassword", { required: true })}
+              placeholder="Подтверждение пароля"
+              type="password"
+            ></input>
+            {isRegisterError && <p>{isRegisterError}</p>}
+            {postRegisterError && <i>{postRegisterError}</i>}
+            <button>Зарегистрироваться</button>
+            <h5>
+              Уже есть аккаунт?{" "}
+              <span
+                onClick={() => {
+                  setState(false);
+                }}
+              >
+                Войти
+              </span>
+            </h5>
+          </RegistrationForm>
         </>
       )}
     </>
