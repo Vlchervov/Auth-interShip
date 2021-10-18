@@ -6,10 +6,11 @@ import {
   AuthForm,
   MainTitle,
   MainTitleRegister,
+  PasswordCheckEye,
   RegistrationForm,
 } from "../styled-components/Login.styled";
 
-const Login = () => {
+const Login = (data) => {
   const {
     register,
     handleSubmit,
@@ -101,6 +102,10 @@ const Login = () => {
     className += "Error";
   }
 
+  const [inputState, setInputState] = useState({
+    type: "password",
+  });
+
   return (
     <>
       <AboutAccount hidden={formVisible === false}>
@@ -130,18 +135,30 @@ const Login = () => {
               required: "Обязательное поле",
               pattern: { value: /@/, message: "Неверный формат E-mail" },
             })}
-            type="text"
+            type="email"
             placeholder="E-mail"
           ></input>
           {errors.email?.message && <i>{errors.email?.message}</i>}
           {requestError && <p>{requestError}</p>}
-          <input
-            {...register("password", { required: "Обязательное поле" })}
-            type="password"
-            placeholder="Пароль"
-          ></input>
-          <input type="checkbox"></input>
-          <label>Запомнить меня</label>
+          <PasswordCheckEye>
+            <input
+              className="inputPassword"
+              {...register("password", { required: "Обязательное поле" })}
+              type={inputState.type}
+              placeholder="Пароль"
+            ></input>
+            <div
+              onClick={() => {
+                if (inputState.type === "password") {
+                  setInputState({ type: "text" });
+                } else {
+                  setInputState({ type: "password" });
+                }
+              }}
+            ></div>
+          </PasswordCheckEye>
+          <input type="checkbox" id="remember"></input>
+          <label htmlFor="remember">Запомнить меня</label>
           <input type="submit" value="Войти"></input>
           <h5>
             Ещё не зарегистрированы?{" "}

@@ -12,13 +12,8 @@ body {
 @font-face {
   font-family: "Avenir Next";
   src: url("/src/fonts/ofont.ru_Avenir\ Next.ttf");
-  font-style: normal;
 }
 
 .error {
   color: #fe2e2e;
 }
-
-/* .listItem {
-  border: 2px solid #F06060;
-} */
