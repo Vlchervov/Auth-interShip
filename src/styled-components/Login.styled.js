@@ -201,10 +201,10 @@ export const AuthForm = styled.form`
   }
 `;
 
-export const MainTitleRegister = styled.h1 `
+export const MainTitleRegister = styled.h1`
   position: absolute;
   font-size: 41px;
-  top: 22.9vh;
+  top: 21.6vh;
   left: 44.37vw;
   font-weight: bold;
   color: #333333;
@@ -212,11 +212,11 @@ export const MainTitleRegister = styled.h1 `
   span {
     color: #58fa58;
   }
-`
+`;
 
 export const RegistrationForm = styled.form`
   position: absolute;
-  top: 33.5vh;
+  top: 31.5vh;
   left: 38.4vw;
   z-index: 11;
   height: 527px;
@@ -242,17 +242,17 @@ export const RegistrationForm = styled.form`
     font-weight: normal;
     font-style: normal;
     position: absolute;
-    top: 53.8vh;
+    top: 51vh;
     padding: 0px 40px;
   }
 
   input {
     position: relative;
-    top: 4.74vh;
+    top: 4.2vh;
     left: 1.4vw;
-    margin: 0px 15px 15.5px;
+    margin: 0px 15px 10px;
     display: flex;
-    height: 40.8px;
+    height: 46px;
     width: 333px;
     border-radius: 4px;
     padding: 1px 14px;
@@ -269,8 +269,8 @@ export const RegistrationForm = styled.form`
 
   button {
     position: absolute;
-    top: 45vh;
-    left: 2.2vw;
+    top: 42.5vh;
+    left: 2.1vw;
     background-color: #75ebeb;
     color: #333333;
     font-weight: 500;
@@ -278,14 +278,14 @@ export const RegistrationForm = styled.form`
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #75ebeb;
-    width: 364px;
-    height: 50px;
+    width: 366px;
+    height: 49px;
     cursor: pointer;
   }
 
   h5 {
     position: absolute;
-    top: 49vh;
+    top: 46.2vh;
     left: 2.2vw;
     color: #000000;
     font-style: normal;
