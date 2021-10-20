@@ -10,7 +10,7 @@ import {
   RegistrationForm,
 } from "../styled-components/Login.styled";
 
-const Login = (data) => {
+const Login = () => {
   const {
     register,
     handleSubmit,
@@ -38,7 +38,7 @@ const Login = (data) => {
         });
       });
     } catch (err) {
-      console.log(err.message);
+      setRequestError(err.message);
     }
   };
 
@@ -142,7 +142,6 @@ const Login = (data) => {
           {requestError && <p>{requestError}</p>}
           <PasswordCheckEye>
             <input
-              className="inputPassword"
               {...register("password", { required: "Обязательное поле" })}
               type={inputState.type}
               placeholder="Пароль"
