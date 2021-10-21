@@ -65,11 +65,7 @@ const Login = () => {
           fetchData();
         });
     } catch (err) {
-      if (err.response.status === 500) {
-        setRequestError(err.message);
-      } else if (err.response.status === 401) {
-        setRequestError(err.message);
-      }
+      setRequestError(err.response.data.message);
     }
   }
 
@@ -94,9 +90,7 @@ const Login = () => {
             setState(false);
           });
       } catch (err) {
-        if (err.response.status === 403) {
-          setPostRegisterError("Пользователь с такой почтой уже существует");
-        }
+        setPostRegisterError(err.response.data.error);
       }
     } else {
       setIsRegisterError("Пароли не совпадают!");
