@@ -86,13 +86,11 @@ export const PasswordCheckEye = styled.div`
 
 export const MainTitle = styled.h1`
   position: absolute;
-  font-size: 40px;
+  font-size: 41px;
   top: 31.9vh;
   left: 44.2vw;
   font-weight: bold;
   color: #333333;
-  font-family: "Avenir Next";
-  letter-spacing: 1.06px;
   span {
     color: #58fa58;
   }
@@ -140,8 +138,8 @@ export const AuthForm = styled.form`
     margin: 11px 40px;
     margin-top: 40px;
     margin-bottom: 0px;
-    padding: 16px 11px 16px;
-    width: 341px;
+    padding: 16px 17px 16px;
+    width: 330px;
     background: #f5f7fa;
     outline: none;
 
@@ -159,7 +157,7 @@ export const AuthForm = styled.form`
     border-radius: 4px;
     margin-left: 40px;
     padding: 16px 17px;
-    width: 331px;
+    width: 330px;
     margin-top: 10px;
     background: #f5f7fa;
   }
