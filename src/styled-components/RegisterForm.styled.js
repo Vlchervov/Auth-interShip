@@ -26,7 +26,7 @@ export const MainRegistrationForm = styled.form`
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #75ebeb;
-    width: 366px;
+    width: 19.0625vw;
     height: 49px;
     cursor: pointer;
   }
@@ -35,6 +35,7 @@ export const MainRegistrationForm = styled.form`
     background-color: #d8d8d8;
     border: 1px solid #d8d8d8;
     cursor: auto;
+    color: #fafafa;
   }
 
   button:enabled {

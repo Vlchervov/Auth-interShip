@@ -1,9 +1,10 @@
 import useSWR from "swr";
 import { fetcher } from "../components/Fetcher";
-import { AboutAccount } from "../styled-components/LoginForm.styled";
+import { logOut } from "../components/History";
+import { AboutAccount } from "../styled-components/Profile.styled.js";
 
 const ProfileApp = () => {
-  const { data, error, mutate } = useSWR("/profile", fetcher);
+  const { data, error } = useSWR("/profile", fetcher);
   if (error) {
     return <div>Error...</div>;
   }
@@ -11,6 +12,7 @@ const ProfileApp = () => {
   if (!data) {
     return <div>Loading...</div>;
   }
+
   return (
     <>
       <AboutAccount>
@@ -20,14 +22,7 @@ const ProfileApp = () => {
         <p>ID: {data.id}</p>
         <p>Имя: {data.firstName}</p>
         <p>Фамилия: {data.lastName}</p>
-        <button
-          onClick={() => {
-            mutate("/profile");
-            console.log(localStorage);
-          }}
-        >
-          изменить
-        </button>
+        <button onClick={() => logOut()}>Выйти</button>
       </AboutAccount>
     </>
   );

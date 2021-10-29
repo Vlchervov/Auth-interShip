@@ -34,7 +34,7 @@ const RegisterForm = (props) => {
             setTimeout(() => {
               props.setState(!props.state);
               reset();
-            }, 1500);
+            }, 2000);
           });
       } catch (err) {
         setPostRegisterError(err.response.data.error);
@@ -44,7 +44,6 @@ const RegisterForm = (props) => {
       setDisabledState({ disabled: true });
     }
   }
-  let errorClassName = "inputItem";
 
   return (
     <>
@@ -137,9 +136,7 @@ const RegisterForm = (props) => {
 
         {postRegisterError && <i>{postRegisterError}</i>}
         {loaderState === false ? (
-          <button className={errorClassName} disabled={disabledState.disabled}>
-            Зарегистрироваться
-          </button>
+          <button disabled={disabledState.disabled}>Зарегистрироваться</button>
         ) : (
           <div className="lds-ring">
             <div></div>

@@ -1,12 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { logIn } from "../components/History";
 import {
   MainFormLogin,
   PasswordCheckEye,
 } from "../styled-components/LoginForm.styled";
 
 const LoginForm = (props) => {
+  const [opacityState, setOpacityState] = useState(false);
   const [inputType, setInputType] = useState({
     type: "password",
   });
@@ -21,7 +23,6 @@ const LoginForm = (props) => {
     baseURL: "http://clinic.studio-mind.ru",
   });
 
-
   async function onLogin(data) {
     try {
       await instance
@@ -31,7 +32,7 @@ const LoginForm = (props) => {
         })
         .then((res) => {
           localStorage.setItem("token", res.data.accessToken);
-          reset();
+          logIn();
         });
     } catch (err) {
       setRequestError(err.message);
@@ -57,7 +58,7 @@ const LoginForm = (props) => {
           placeholder="E-mail"
         ></input>
         {errors.email?.message && <i>{errors.email?.message}</i>}
-        <PasswordCheckEye>
+        <PasswordCheckEye change={opacityState}>
           <input
             {...register("password", { required: "Обязательное поле" })}
             type={inputType.type}
@@ -68,8 +69,10 @@ const LoginForm = (props) => {
             onClick={() => {
               if (inputType.type === "password") {
                 setInputType({ type: "text" });
+                setOpacityState(true);
               } else {
                 setInputType({ type: "password" });
+                setOpacityState(false);
               }
             }}
           ></div>

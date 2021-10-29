@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { MainTitleRegister } from "../styled-components/Login.styled";
+import { MainTitle } from "../styled-components/LoginForm.styled";
 import LoginForm from "./LoginForm";
-import ProfileApp from "./Profile";
 import RegisterForm from "./RegisterForm";
 
 const AuthForm = () => {
@@ -9,12 +8,11 @@ const AuthForm = () => {
 
   return (
     <>
-      <MainTitleRegister>
+      <MainTitle>
         ClinicTrack<span>.</span>
-      </MainTitleRegister>
-      <ProfileApp/>
+      </MainTitle>
       {!state ? (
-        <LoginForm state={state} setState={setState}/>
+        <LoginForm state={state} setState={setState} />
       ) : (
         <RegisterForm state={state} setState={setState} />
       )}

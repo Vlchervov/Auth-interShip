@@ -58,16 +58,12 @@ body {
   src: url("/src/fonts/ofont.ru_Avenir\ Next.ttf");
 }
 
-.error {
-  color: #fe2e2e;
-}
-
 .newEmail {
   display: flex;
   margin: 42px 40px 10px;
   padding: 1px 14px;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   border-radius: 4px;
   border: 1px solid #c9d6f0;
   background: #f5f7fa;
@@ -84,7 +80,7 @@ body {
   display: flex;
   margin: 0px 42px 10px;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   padding: 1px 14px;
   border-radius: 4px;
   background: #f5f7fa;
@@ -103,7 +99,7 @@ body {
   padding: 1px 14px;
   margin: 0px 42px 10px;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   border-radius: 4px;
   background: #f5f7fa;
   border: 1px solid #c9d6f0;
@@ -121,7 +117,7 @@ body {
   margin: 0px 42px 10px;
   padding: 1px 14px;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   background: #f5f7fa;
   border-radius: 4px;
   border: 1px solid #c9d6f0;
@@ -139,7 +135,7 @@ body {
   margin: 0px 42px 10px;
   padding: 1px 14px;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   border-radius: 4px;
   background: #f5f7fa;
   border: 1px solid #c9d6f0;
@@ -157,7 +153,7 @@ body {
   margin: 0px 42px 10px;
   display: flex;
   height: 46px;
-  width: 335px;
+  width: 17.447916666666668vw;
   border-radius: 4px;
   background: #f5f7fa;
   border: 1px solid #c9d6f0;

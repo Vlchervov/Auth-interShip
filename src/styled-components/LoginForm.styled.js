@@ -1,64 +1,5 @@
 import styled from "styled-components";
 
-export const AboutAccount = styled.div`
-  position: relative;
-  width: 26vw;
-  height: 54vh;
-  left: 2vw;
-  top: 21vh;
-  border-radius: 10px;
-  background: white;
-
-  h5 {
-    padding: 2rem;
-    font-weight: 500;
-    font-family: "Avenir Next";
-    font-size: 14px;
-    text-align: end;
-    color: #585858;
-
-    :after {
-      content: "";
-      display: block;
-      height: 1px;
-      background-color: #d8d8d8;
-    }
-  }
-
-  p {
-    font-family: "Avenir Next";
-    position: relative;
-    left: 3rem;
-
-    :after {
-      content: "";
-      display: block;
-      height: 1px;
-      background-color: #d8d8d8;
-      width: 80%;
-    }
-  }
-
-  button {
-    width: 4vw;
-    height: 3vh;
-    position: absolute;
-    background-color: #d8d8d8;
-    display: block;
-    top: 35vh;
-    left: 10vw;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: 0.25s;
-    color: #000000;
-
-    :hover {
-      background: #fa5858;
-    }
-  }
-`;
-
 export const MainTitle = styled.h1`
   position: absolute;
   font-size: 41px;
@@ -113,7 +54,7 @@ export const MainFormLogin = styled.form`
     margin-top: 41px;
     margin-bottom: 0px;
     padding: 16px 17px 16px;
-    width: 330px;
+    width: 17.1875vw;
     background: #f5f7fa;
     outline: none;
 
@@ -131,7 +72,7 @@ export const MainFormLogin = styled.form`
     border-radius: 4px;
     margin-left: 40px;
     padding: 16px 17px;
-    width: 330px;
+    width: 17.1875vw;
     margin-top: 11px;
     background: #f5f7fa;
   }
@@ -191,8 +132,8 @@ export const PasswordCheckEye = styled.div`
     border-radius: 4px;
     margin-left: 40px;
     padding: 16px 17px;
-    width: 330px;
-    margin-top: 10px;
+    width: 17.1875vw;
+    margin-top: 11px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
   }
@@ -200,10 +141,14 @@ export const PasswordCheckEye = styled.div`
   div {
     position: absolute;
     top: 13px;
-    right: 55px;
+    right: 2.8645833333333335vw;
     width: 24px;
     height: 23px;
     background: url("./img/view.svg") no-repeat;
     cursor: pointer;
+    opacity: ${({ change }) => (change ? "0.5" : "1")};
+    :hover {
+      opacity: 0.8;
+    }
   }
 `;

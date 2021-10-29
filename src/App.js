@@ -1,12 +1,7 @@
 import React from "react";
-import AuthForm from "./pages/AuthForm";
-
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  return (
-    <> 
-      <AuthForm />
-    </>
-  );
+  return <AppRouter />;
 }
 export default App;
