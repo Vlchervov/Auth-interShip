@@ -59,31 +59,6 @@ export const AboutAccount = styled.div`
   }
 `;
 
-export const PasswordCheckEye = styled.div`
-  position: relative;
-
-  input[type="text"] {
-    display: block;
-    border-radius: 4px;
-    margin-left: 40px;
-    padding: 16px 17px;
-    width: 330px;
-    margin-top: 10px;
-    background: #f5f7fa;
-    border: 1px solid #c9d6f0;
-  }
-
-  div {
-    position: absolute;
-    top: 15px;
-    right: 55px;
-    width: 20px;
-    height: 20px;
-    background: url('./img/view.svg') no-repeat;
-    cursor: pointer;
-  }
-`;
-
 export const MainTitle = styled.h1`
   position: absolute;
   font-size: 41px;
@@ -96,10 +71,10 @@ export const MainTitle = styled.h1`
   }
 `;
 
-export const AuthForm = styled.form`
+export const MainFormLogin = styled.form`
   position: absolute;
   border-radius: 10px;
-  top: 41.7vh;
+  top: 42.7vh;
   left: 38.4vw;
   width: 23.2vw;
   transform: translate(50%, 0, 50%);
@@ -118,9 +93,9 @@ export const AuthForm = styled.form`
     padding: 1px 40px;
     margin-top: 0px;
     font-family: "Avenir Next";
-    font-size: 14px;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
   }
 
   input[type="email"] {
@@ -134,8 +109,8 @@ export const AuthForm = styled.form`
   input[type="email"] {
     display: block;
     border-radius: 4px;
-    margin: 11px 40px;
-    margin-top: 40px;
+    margin: 10px 40px;
+    margin-top: 41px;
     margin-bottom: 0px;
     padding: 16px 17px 16px;
     width: 330px;
@@ -157,7 +132,7 @@ export const AuthForm = styled.form`
     margin-left: 40px;
     padding: 16px 17px;
     width: 330px;
-    margin-top: 10px;
+    margin-top: 11px;
     background: #f5f7fa;
   }
 
@@ -166,8 +141,8 @@ export const AuthForm = styled.form`
   }
 
   input[type="checkbox"] {
-    margin: 11px 41px 0px;
-    margin-right: 12px;
+    margin: 12px 41px 0px;
+    margin-right: 12.5px;
     cursor: pointer;
   }
 
@@ -194,7 +169,7 @@ export const AuthForm = styled.form`
   }
 
   h5 {
-    margin: 10px 40px 20px;
+    margin: 10px 40px 22px;
     display: block;
     font-style: normal;
     font-weight: 500;
@@ -208,107 +183,27 @@ export const AuthForm = styled.form`
     }
   }
 `;
+export const PasswordCheckEye = styled.div`
+  position: relative;
 
-export const MainTitleRegister = styled.h1`
-  position: absolute;
-  font-size: 41px;
-  top: 32.6vh;
-  left: 44.38vw;
-  font-weight: bold;
-  color: #333333;
-
-  span {
-    color: #58fa58;
-  }
-`;
-
-export const RegistrationForm = styled.form`
-  position: absolute;
-  top: 31.5vh;
-  left: 38.4vw;
-  z-index: 11;
-  height: 527px;
-  width: 445px;
-  background: #ffffff;
-  border-radius: 10px;
-
-  p {
-    color: #fe2e2e;
-    margin: 20px 20px;
-    padding: 20px 20px;
-    font-family: "Avenir Next";
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  i {
-    color: #fe2e2e;
-    font-family: "Avenir Next";
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    position: absolute;
-    top: 51vh;
-    padding: 0px 40px;
-  }
-
-  input {
-    position: relative;
-    top: 4.2vh;
-    left: 1.4vw;
-    margin: 0px 15px 10px;
-    display: flex;
-    height: 46px;
-    width: 333px;
+  input[type="text"] {
+    display: block;
     border-radius: 4px;
-    padding: 1px 14px;
+    margin-left: 40px;
+    padding: 16px 17px;
+    width: 330px;
+    margin-top: 10px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
-
-    ::placeholder {
-      color: #798bad;
-      font-family: "Avenir Next";
-      font-style: normal;
-      font-size: 14px;
-    }
-
-    :required {
-    border: 1px solid #fe2e2e;
-  }
   }
 
-
-
-  button {
+  div {
     position: absolute;
-    top: 42.5vh;
-    left: 2.1vw;
-    background-color: #75ebeb;
-    color: #333333;
-    font-weight: 500;
-    font-family: "Avenir Next";
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #75ebeb;
-    width: 366px;
-    height: 49px;
+    top: 13px;
+    right: 55px;
+    width: 24px;
+    height: 23px;
+    background: url("./img/view.svg") no-repeat;
     cursor: pointer;
-  }
-
-  h5 {
-    position: absolute;
-    top: 46.2vh;
-    left: 2.2vw;
-    color: #000000;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    font-family: "Avenir Next";
-
-    span {
-      cursor: pointer;
-      color: #01dfa5;
-    }
   }
 `;
