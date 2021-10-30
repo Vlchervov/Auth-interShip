@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MainRegistrationForm } from "../styled-components/RegisterForm.styled";
+import {
+  MainRegistrationForm,
+  MainTitleRegister,
+} from "../styled-components/RegisterForm.styled";
 
 const RegisterForm = (props) => {
   const {
@@ -47,6 +50,9 @@ const RegisterForm = (props) => {
 
   return (
     <>
+      <MainTitleRegister>
+        ClinicTrack<span>.</span>
+      </MainTitleRegister>
       <MainRegistrationForm
         onSubmit={handleSubmit(onRegistrationUser)}
         onChange={() => {
@@ -133,8 +139,6 @@ const RegisterForm = (props) => {
         {errors.confirmPassword?.message && (
           <p>{errors.confirmPassword?.message}</p>
         )}
-
-        {postRegisterError && <i>{postRegisterError}</i>}
         {loaderState === false ? (
           <button disabled={disabledState.disabled}>Зарегистрироваться</button>
         ) : (
@@ -156,6 +160,7 @@ const RegisterForm = (props) => {
           </span>
         </h5>
         <i>{isPasswordError}</i>
+        <p>{postRegisterError}</p>
       </MainRegistrationForm>
     </>
   );

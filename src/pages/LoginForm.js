@@ -1,22 +1,22 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useCookies } from "react-cookie";
 import { useForm } from "react-hook-form";
 import { logIn } from "../components/History";
 import {
   MainFormLogin,
+  MainTitle,
   PasswordCheckEye,
 } from "../styled-components/LoginForm.styled";
 
 const LoginForm = (props) => {
   const [opacityState, setOpacityState] = useState(false);
-  const [inputType, setInputType] = useState({
-    type: "password",
-  });
+  const [loaderState, setLoaderState] = useState(false);
+  const [, setCookies] = useCookies(["user"]);
   const [requestError, setRequestError] = useState();
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
   const instance = axios.create({
@@ -31,8 +31,12 @@ const LoginForm = (props) => {
           password: data.password,
         })
         .then((res) => {
+          setLoaderState(true);
+          setCookies("user", data.email, { path: "/" });
           localStorage.setItem("token", res.data.accessToken);
-          logIn();
+          setTimeout(() => {
+            logIn();
+          }, 2000);
         });
     } catch (err) {
       setRequestError(err.message);
@@ -47,6 +51,9 @@ const LoginForm = (props) => {
 
   return (
     <>
+      <MainTitle>
+        ClinicTrack<span>.</span>
+      </MainTitle>
       <MainFormLogin onSubmit={handleSubmit(onLogin)}>
         <input
           className={className}
@@ -61,17 +68,17 @@ const LoginForm = (props) => {
         <PasswordCheckEye change={opacityState}>
           <input
             {...register("password", { required: "Обязательное поле" })}
-            type={inputType.type}
+            type={props.inputType.type}
             placeholder="Пароль"
           ></input>
           {errors.password?.message && <i>{errors.password?.message}</i>}
           <div
             onClick={() => {
-              if (inputType.type === "password") {
-                setInputType({ type: "text" });
+              if (props.inputType.type === "password") {
+                props.setInputType({ type: "text" });
                 setOpacityState(true);
               } else {
-                setInputType({ type: "password" });
+                props.setInputType({ type: "password" });
                 setOpacityState(false);
               }
             }}
@@ -79,7 +86,16 @@ const LoginForm = (props) => {
         </PasswordCheckEye>
         <input type="checkbox" id="rememberMe"></input>
         <label htmlFor="rememberMe">Запомнить меня</label>
-        <input type="submit" value="Войти"></input>
+        {loaderState === false ? (
+          <input type="submit" value="Войти"></input>
+        ) : (
+          <div className="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        )}
         <h5>
           Ещё не зарегистрированы?{" "}
           <span

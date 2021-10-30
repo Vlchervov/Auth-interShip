@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const AboutAccount = styled.div`
   position: relative;
-  width: 26vw;
-  height: 54vh;
+  max-width: 26%;
   left: 38.4vw;
   top: 21vh;
   border-radius: 10px;
   background: white;
+  padding: 3px;
 
   h5 {
     padding: 2rem;
@@ -42,12 +42,9 @@ export const AboutAccount = styled.div`
   button {
     width: 17.1875vw;
     height: 4vh;
-    position: absolute;
     background-color: #75ebeb;
     display: block;
-    bottom: 7%;
     border: none;
-    left: 4.5vw;
     text-align: center;
     cursor: pointer;
     color: #000000;
@@ -55,6 +52,7 @@ export const AboutAccount = styled.div`
     font-family: "Avenir Next";
     font-size: 16px;
     border-radius: 4px;
+    margin: 80px auto;
 
     :hover {
       background: #fa5858;

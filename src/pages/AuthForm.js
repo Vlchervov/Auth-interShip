@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { MainTitle } from "../styled-components/LoginForm.styled";
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 
 const AuthForm = () => {
   const [state, setState] = useState(false);
+  const [inputType, setInputType] = useState({
+    type: "password",
+  });
 
   return (
     <>
-      <MainTitle>
-        ClinicTrack<span>.</span>
-      </MainTitle>
       {!state ? (
-        <LoginForm state={state} setState={setState} />
+        <LoginForm
+          state={state}
+          setState={setState}
+          inputType={inputType}
+          setInputType={setInputType}
+        />
       ) : (
         <RegisterForm state={state} setState={setState} />
       )}
