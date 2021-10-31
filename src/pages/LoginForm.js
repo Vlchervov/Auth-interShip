@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useForm } from "react-hook-form";
 import { logIn } from "../components/History";
+import { Input } from "../components/input";
 import {
   MainFormLogin,
   MainTitle,
-  PasswordCheckEye,
 } from "../styled-components/LoginForm.styled";
 
 const LoginForm = (props) => {
-  const [opacityState, setOpacityState] = useState(false);
   const [loaderState, setLoaderState] = useState(false);
-  const [, setCookies] = useCookies(["user"]);
+  const [cookies, setCookies] = useCookies(["user"]);
   const [requestError, setRequestError] = useState();
   const {
     register,
@@ -43,47 +42,13 @@ const LoginForm = (props) => {
     }
   }
 
-  let className = "listItem";
-
-  if (errors.email) {
-    className += "Error";
-  }
-
   return (
     <>
       <MainTitle>
         ClinicTrack<span>.</span>
       </MainTitle>
       <MainFormLogin onSubmit={handleSubmit(onLogin)}>
-        <input
-          className={className}
-          {...register("email", {
-            required: "Обязательное поле",
-            pattern: { value: /@/, message: "Неверный формат E-mail" },
-          })}
-          type="email"
-          placeholder="E-mail"
-        ></input>
-        {errors.email?.message && <i>{errors.email?.message}</i>}
-        <PasswordCheckEye change={opacityState}>
-          <input
-            {...register("password", { required: "Обязательное поле" })}
-            type={props.inputType.type}
-            placeholder="Пароль"
-          ></input>
-          {errors.password?.message && <i>{errors.password?.message}</i>}
-          <div
-            onClick={() => {
-              if (props.inputType.type === "password") {
-                props.setInputType({ type: "text" });
-                setOpacityState(true);
-              } else {
-                props.setInputType({ type: "password" });
-                setOpacityState(false);
-              }
-            }}
-          ></div>
-        </PasswordCheckEye>
+        <Input register={register} errors={errors} />
         <input type="checkbox" id="rememberMe"></input>
         <label htmlFor="rememberMe">Запомнить меня</label>
         {loaderState === false ? (

@@ -1,18 +1,17 @@
 import axios from "axios";
 
-axios.interceptors.request.use(
-  (config) => {
-    config.baseURL = "http://clinic.studio-mind.ru";
-    config.headers.authorization = "Bearer " + localStorage.getItem("token");
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
+const getToken = () => {
+  return "Bearer " + localStorage.getItem("token");
+};
+
+const axiosInstance = axios.create({
+  baseURL: "http://clinic.studio-mind.ru",
+});
 
 export const fetcher = async () => {
-  const response = await axios.get("/profile");
+  const response = await axiosInstance.get("/profile", {
+    headers: { authorization: getToken() },
+  });
   if (response.statusText !== "OK") {
     const error = new Error();
     error.message = "An error occured while fetching the data...";
@@ -20,3 +19,5 @@ export const fetcher = async () => {
   }
   return response.data;
 };
+
+

@@ -4,19 +4,11 @@ import RegisterForm from "./RegisterForm";
 
 const AuthForm = () => {
   const [state, setState] = useState(false);
-  const [inputType, setInputType] = useState({
-    type: "password",
-  });
 
   return (
     <>
       {!state ? (
-        <LoginForm
-          state={state}
-          setState={setState}
-          inputType={inputType}
-          setInputType={setInputType}
-        />
+        <LoginForm state={state} setState={setState} />
       ) : (
         <RegisterForm state={state} setState={setState} />
       )}

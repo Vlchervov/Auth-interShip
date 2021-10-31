@@ -94,6 +94,7 @@ export const MainRegistrationForm = styled.form`
     border-radius: 4px;
     border: 1px solid #c9d6f0;
     background: #f5f7fa;
+    outline: none;
   }
 
   .newEmail::placeholder {
@@ -112,6 +113,7 @@ export const MainRegistrationForm = styled.form`
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
+    outline: none;
   }
 
   .newUserName::placeholder {
@@ -130,6 +132,7 @@ export const MainRegistrationForm = styled.form`
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
+    outline: none;
   }
 
   .firstName::placeholder {
@@ -148,6 +151,7 @@ export const MainRegistrationForm = styled.form`
     background: #f5f7fa;
     border-radius: 4px;
     border: 1px solid #c9d6f0;
+    outline: none;
   }
 
   .lastName::placeholder {
@@ -166,6 +170,7 @@ export const MainRegistrationForm = styled.form`
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
+    outline: none;
   }
 
   .newPassword::placeholder {
@@ -184,6 +189,7 @@ export const MainRegistrationForm = styled.form`
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
+    outline: none;
   }
 
   .confirmPassword::placeholder {

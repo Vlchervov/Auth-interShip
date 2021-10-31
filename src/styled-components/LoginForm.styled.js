@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainTitle = styled.h1`
   position: absolute;
   font-size: 41px;
-  top: 32.7vh;
+  top: 20%;
   left: 44.8%;
   font-weight: bold;
   color: #333333;
@@ -12,7 +12,6 @@ export const MainTitle = styled.h1`
   }
   @media screen and (min-height: 1600px) and (max-width: 1460px) {
     left: 42.8%;
-    top: 36vh;
   }
 `;
 
@@ -20,9 +19,9 @@ export const MainFormLogin = styled.form`
   position: absolute;
   border-radius: 10px;
   width: 23.4%;
-  top: 42.7vh;
-  left: 38.4vw;
-  transform: translate(50%, 0, 50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
 
   i {
@@ -45,20 +44,13 @@ export const MainFormLogin = styled.form`
 
   input[type="email"] {
     border: 1px solid #c9d6f0;
-  }
-
-  input.listItemError {
-    border: 1px solid #f06060;
-  }
-
-  input[type="email"] {
     display: block;
     border-radius: 4px;
     margin: 10px 40px;
     margin-top: 41px;
     margin-bottom: 0px;
     padding: 16px 17px 16px;
-    width: 17.1875vw;
+    width: 73.6%;
     background: #f5f7fa;
     outline: none;
 
@@ -80,9 +72,10 @@ export const MainFormLogin = styled.form`
     border-radius: 4px;
     margin-left: 40px;
     padding: 16px 17px;
-    width: 17.1875vw;
+    width: 73.6%;
     margin-top: 11px;
     background: #f5f7fa;
+    outline: none;
 
     @media screen and (min-height: 1600px) and (max-width: 1460px) {
       margin-left: 30px;
@@ -234,6 +227,7 @@ export const PasswordCheckEye = styled.div`
     margin-top: 11px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
+    outline: none;
 
     @media screen and (min-height: 1600px) and (max-width: 1460px) {
       margin-left: 30px;
