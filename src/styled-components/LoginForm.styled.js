@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainTitle = styled.h1`
   position: absolute;
   font-size: 41px;
-  top: 20%;
+  top: 33.4%;
   left: 44.8%;
   font-weight: bold;
   color: #333333;
@@ -12,6 +12,7 @@ export const MainTitle = styled.h1`
   }
   @media screen and (min-height: 1600px) and (max-width: 1460px) {
     left: 42.8%;
+    top: 42.8%;
   }
 `;
 
@@ -19,8 +20,8 @@ export const MainFormLogin = styled.form`
   position: absolute;
   border-radius: 10px;
   width: 23.4%;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 50.5%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
 
@@ -43,14 +44,13 @@ export const MainFormLogin = styled.form`
   }
 
   input[type="email"] {
-    border: 1px solid #c9d6f0;
     display: block;
     border-radius: 4px;
     margin: 10px 40px;
-    margin-top: 41px;
+    margin-top: 38px;
     margin-bottom: 0px;
-    padding: 16px 17px 16px;
-    width: 73.6%;
+    padding: 16px 15px 16px;
+    width: 75%;
     background: #f5f7fa;
     outline: none;
 
@@ -70,9 +70,9 @@ export const MainFormLogin = styled.form`
   input[type="password"] {
     display: block;
     border-radius: 4px;
-    margin-left: 40px;
+    margin-left: 39px;
     padding: 16px 17px;
-    width: 73.6%;
+    width: 74%;
     margin-top: 11px;
     background: #f5f7fa;
     outline: none;
@@ -87,8 +87,8 @@ export const MainFormLogin = styled.form`
   }
 
   input[type="checkbox"] {
-    margin: 12px 41px 0px;
-    margin-right: 12.5px;
+    margin: 10px 41px 0px;
+    margin-right: 11.6px;
     cursor: pointer;
   }
 
@@ -103,7 +103,7 @@ export const MainFormLogin = styled.form`
     margin: 16px auto 10px;
     padding: 14px;
     display: block;
-    width: 19vw;
+    width: 82%;
     color: #333333;
     font-weight: 500;
     font-size: 16px;
@@ -120,7 +120,7 @@ export const MainFormLogin = styled.form`
   }
 
   h5 {
-    margin: 10px 40px 22px;
+    margin: 0px 40px 22px;
     display: block;
     font-style: normal;
     font-weight: 500;
@@ -160,8 +160,8 @@ export const MainFormLogin = styled.form`
   .lds-ellipsis div {
     display: block;
     position: absolute;
-    margin-top: 1.8vh;
-    margin-left: 7.5vw;
+    margin-top: 5%;
+    margin-left: 37%;
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -171,7 +171,7 @@ export const MainFormLogin = styled.form`
 
   @media screen and (min-height: 1600px) and (max-width: 1460px) {
     .lds-ellipsis div {
-      margin-top: 1.2vh;
+      margin-top: 7%;
     }
   }
   .lds-ellipsis div:nth-child(1) {
@@ -223,7 +223,7 @@ export const PasswordCheckEye = styled.div`
     border-radius: 4px;
     margin-left: 40px;
     padding: 16px 17px;
-    width: 17.1875vw;
+    width: 73.6%;
     margin-top: 11px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
@@ -242,9 +242,8 @@ export const PasswordCheckEye = styled.div`
     height: 23px;
     background: url("./img/view.svg") no-repeat;
     cursor: pointer;
-    opacity: ${({ change }) => (change ? "0.5" : "1")};
     :hover {
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 `;

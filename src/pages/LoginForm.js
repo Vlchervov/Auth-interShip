@@ -1,30 +1,28 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useForm } from "react-hook-form";
 import { logIn } from "../components/History";
-import { Input } from "../components/input";
+import { AuthInput } from "../components/AuthInput";
 import {
   MainFormLogin,
   MainTitle,
 } from "../styled-components/LoginForm.styled";
+import { axiosInstance } from "../components/Api";
 
 const LoginForm = (props) => {
   const [loaderState, setLoaderState] = useState(false);
-  const [cookies, setCookies] = useCookies(["user"]);
+  const [, setCookies] = useCookies(["user"]);
+
   const [requestError, setRequestError] = useState();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const instance = axios.create({
-    baseURL: "http://clinic.studio-mind.ru",
-  });
 
   async function onLogin(data) {
     try {
-      await instance
+      await axiosInstance
         .post("/login", {
           username: data.email,
           password: data.password,
@@ -48,7 +46,7 @@ const LoginForm = (props) => {
         ClinicTrack<span>.</span>
       </MainTitle>
       <MainFormLogin onSubmit={handleSubmit(onLogin)}>
-        <Input register={register} errors={errors} />
+        <AuthInput register={register} errors={errors} />
         <input type="checkbox" id="rememberMe"></input>
         <label htmlFor="rememberMe">Запомнить меня</label>
         {loaderState === false ? (

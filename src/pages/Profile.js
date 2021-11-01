@@ -19,7 +19,7 @@ const ProfileApp = () => {
 
   if (!data) {
     const user = () => {
-      if (!localStorage.getItem("token")) {
+      if (!localStorage.token) {
         logOut();
       }
     };

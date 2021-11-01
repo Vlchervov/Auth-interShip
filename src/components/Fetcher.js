@@ -1,12 +1,8 @@
-import axios from "axios";
+import { axiosInstance } from "./Api";
 
 const getToken = () => {
   return "Bearer " + localStorage.getItem("token");
 };
-
-const axiosInstance = axios.create({
-  baseURL: "http://clinic.studio-mind.ru",
-});
 
 export const fetcher = async () => {
   const response = await axiosInstance.get("/profile", {
@@ -19,5 +15,3 @@ export const fetcher = async () => {
   }
   return response.data;
 };
-
-

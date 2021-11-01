@@ -3,23 +3,25 @@ import styled from "styled-components";
 export const MainTitleRegister = styled.h1`
   position: absolute;
   font-size: 41px;
-  top: 21.6vh;
-  left: 44.8%;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
   font-weight: bold;
   color: #333333;
   span {
     color: #58fa58;
   }
   @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    left: 43%;
-    top: 25vh;
+    top: 23%;
   }
 `;
 
 export const MainRegistrationForm = styled.form`
+  width: 23.5%;
   position: absolute;
-  top: 31.5vh;
-  left: 38.4vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 10px;
 
@@ -43,7 +45,7 @@ export const MainRegistrationForm = styled.form`
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #75ebeb;
-    width: 19.0625vw;
+    width: 82%;
     height: 49px;
     cursor: pointer;
   }
@@ -90,7 +92,7 @@ export const MainRegistrationForm = styled.form`
     margin: 42px 40px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     border-radius: 4px;
     border: 1px solid #c9d6f0;
     background: #f5f7fa;
@@ -106,9 +108,9 @@ export const MainRegistrationForm = styled.form`
 
   .newUserName {
     display: flex;
-    margin: 0px 42px 10px;
+    margin: 0px 41px 10px;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     padding: 1px 14px;
     border-radius: 4px;
     background: #f5f7fa;
@@ -126,9 +128,9 @@ export const MainRegistrationForm = styled.form`
   .firstName {
     display: flex;
     padding: 1px 14px;
-    margin: 0px 42px 10px;
+    margin: 0px 41px 10px;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
@@ -144,10 +146,10 @@ export const MainRegistrationForm = styled.form`
 
   .lastName {
     display: flex;
-    margin: 0px 42px 10px;
+    margin: 0px 41px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     background: #f5f7fa;
     border-radius: 4px;
     border: 1px solid #c9d6f0;
@@ -163,10 +165,10 @@ export const MainRegistrationForm = styled.form`
 
   .newPassword {
     display: flex;
-    margin: 0px 42px 10px;
+    margin: 0px 41px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
@@ -182,10 +184,10 @@ export const MainRegistrationForm = styled.form`
 
   .confirmPassword {
     padding: 1px 14px;
-    margin: 0px 42px 10px;
+    margin: 0px 41px 10px;
     display: flex;
     height: 46px;
-    width: 17.447916666666668vw;
+    width: 75%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
