@@ -2,28 +2,29 @@ import styled from "styled-components";
 
 export const MainTitle = styled.h1`
   position: absolute;
+  display: block;
   font-size: 41px;
   top: 33.4%;
-  left: 44.8%;
+  left: 46%;
   font-weight: bold;
   color: #333333;
   span {
     color: #58fa58;
-  }
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    left: 42.8%;
-    top: 42.8%;
   }
 `;
 
 export const MainFormLogin = styled.form`
   position: absolute;
   border-radius: 10px;
-  width: 23.4%;
+  width: 445px;
   top: 60%;
   left: 50.5%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
+
+  @media (max-width: 812px) {
+    width: 350px;
+  }
 
   i {
     margin: 0px 41px;
@@ -31,6 +32,10 @@ export const MainFormLogin = styled.form`
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   p {
@@ -46,7 +51,7 @@ export const MainFormLogin = styled.form`
   input[type="email"] {
     display: block;
     border-radius: 4px;
-    margin: 10px 40px;
+    margin: 10px 39px;
     margin-top: 38px;
     margin-bottom: 0px;
     padding: 16px 15px 16px;
@@ -54,16 +59,16 @@ export const MainFormLogin = styled.form`
     background: #f5f7fa;
     outline: none;
 
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
+
     ::placeholder {
       font-size: 14px;
       font-style: normal;
       line-height: 100%;
       font-weight: normal;
       font-family: "Avenir Next";
-    }
-
-    @media screen and (min-height: 1600px) and (max-width: 1460px) {
-      margin-left: 30px;
     }
   }
 
@@ -77,8 +82,8 @@ export const MainFormLogin = styled.form`
     background: #f5f7fa;
     outline: none;
 
-    @media screen and (min-height: 1600px) and (max-width: 1460px) {
-      margin-left: 30px;
+    @media (max-width: 812px) {
+      margin-left: 25px;
     }
   }
 
@@ -90,6 +95,10 @@ export const MainFormLogin = styled.form`
     margin: 10px 41px 0px;
     margin-right: 11.6px;
     cursor: pointer;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   label {
@@ -113,9 +122,8 @@ export const MainFormLogin = styled.form`
     border: 1px solid #75ebeb;
     cursor: pointer;
 
-    @media screen and (min-height: 1600px) and (max-width: 1460px) {
-      margin-left: 30px;
-      width: 19.6vw;
+    @media (max-width: 812px) {
+      margin-left: 25px;
     }
   }
 
@@ -133,27 +141,23 @@ export const MainFormLogin = styled.form`
       font-family: "Avenir Next";
     }
 
-    @media screen and (min-height: 1600px) and (max-width: 1460px) {
-      margin-left: 30px;
+    @media (max-width: 812px) {
+      margin-left: 25px;
     }
   }
 
   .lds-ellipsis {
     display: block;
     position: relative;
-    width: 18.84vw;
-    height: 5vh;
+    width: 82%;
+    height: 50px;
     margin: 16px auto 10px;
     border-radius: 4px;
     border: 1px solid #75ebeb;
     background-color: #75ebeb;
-  }
 
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    .lds-ellipsis {
-      margin: 16px 31px 10px;
-      height: 3vh;
-      width: 19.4vw;
+    @media (max-width: 812px) {
+      margin-left: 25px;
     }
   }
 
@@ -161,7 +165,7 @@ export const MainFormLogin = styled.form`
     display: block;
     position: absolute;
     margin-top: 5%;
-    margin-left: 37%;
+    margin-left: 40%;
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -169,11 +173,6 @@ export const MainFormLogin = styled.form`
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
   }
 
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    .lds-ellipsis div {
-      margin-top: 7%;
-    }
-  }
   .lds-ellipsis div:nth-child(1) {
     left: 8px;
     animation: lds-ellipsis1 0.6s infinite;
@@ -190,6 +189,7 @@ export const MainFormLogin = styled.form`
     left: 56px;
     animation: lds-ellipsis3 0.6s infinite;
   }
+
   @keyframes lds-ellipsis1 {
     0% {
       transform: scale(0);
@@ -215,35 +215,36 @@ export const MainFormLogin = styled.form`
     }
   }
 `;
+
 export const PasswordCheckEye = styled.div`
   position: relative;
 
   input[type="text"] {
     display: block;
     border-radius: 4px;
-    margin-left: 40px;
+    margin-left: 39px;
     padding: 16px 17px;
-    width: 73.6%;
+    width: 74%;
     margin-top: 11px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
-
-    @media screen and (min-height: 1600px) and (max-width: 1460px) {
-      margin-left: 30px;
-    }
   }
 
   div {
     position: absolute;
     top: 13px;
-    right: 2.8645833333333335vw;
+    left: 82%;
     width: 24px;
     height: 23px;
     background: url("./img/view.svg") no-repeat;
     cursor: pointer;
     :hover {
       opacity: 0.6;
+    }
+
+    @media (max-width: 812px) {
+      left: 78%;
     }
   }
 `;

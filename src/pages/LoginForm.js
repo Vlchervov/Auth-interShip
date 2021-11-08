@@ -3,10 +3,7 @@ import { useCookies } from "react-cookie";
 import { useForm } from "react-hook-form";
 import { logIn } from "../components/History";
 import { AuthInput } from "../components/AuthInput";
-import {
-  MainFormLogin,
-  MainTitle,
-} from "../styled-components/LoginForm.styled";
+import { MainFormLogin } from "../styled-components/LoginForm.styled";
 import { axiosInstance } from "../components/Api";
 
 const LoginForm = (props) => {
@@ -42,9 +39,9 @@ const LoginForm = (props) => {
 
   return (
     <>
-      <MainTitle>
+      {/* <MainTitle>
         ClinicTrack<span>.</span>
-      </MainTitle>
+      </MainTitle> */}
       <MainFormLogin onSubmit={handleSubmit(onLogin)}>
         <AuthInput register={register} errors={errors} />
         <input type="checkbox" id="rememberMe"></input>

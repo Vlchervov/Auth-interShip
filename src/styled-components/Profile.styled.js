@@ -2,12 +2,19 @@ import styled from "styled-components";
 
 export const AboutAccount = styled.div`
   position: relative;
-  max-width: 26%;
-  left: 38.4vw;
+  width: 460px;
   top: 21vh;
   border-radius: 10px;
   background: white;
   padding: 3px;
+
+  @media (max-width: 992px) {
+    width: 350px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: none;
+  }
 
   h5 {
     padding: 2rem;
@@ -40,8 +47,8 @@ export const AboutAccount = styled.div`
   }
 
   button {
-    width: 17.1875vw;
-    height: 4vh;
+    width: 70%;
+    height: 40px;
     background-color: #75ebeb;
     display: block;
     border: none;

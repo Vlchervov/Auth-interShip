@@ -17,13 +17,17 @@ export const MainTitleRegister = styled.h1`
 `;
 
 export const MainRegistrationForm = styled.form`
-  width: 23.5%;
+  width: 444px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 59.7%;
+  left: 50.4%;
   transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 10px;
+
+  @media (max-width: 812px) {
+    width: 350px;
+  }
 
   p {
     color: #fe2e2e;
@@ -32,7 +36,10 @@ export const MainRegistrationForm = styled.form`
     font-family: "Avenir Next";
     font-size: 14px;
     font-style: normal;
-    padding-right: 0px;
+
+    @media (max-width: 812px) {
+      padding-left: 25px;
+    }
   }
 
   button {
@@ -48,6 +55,10 @@ export const MainRegistrationForm = styled.form`
     width: 82%;
     height: 49px;
     cursor: pointer;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   button:disabled {
@@ -74,6 +85,10 @@ export const MainRegistrationForm = styled.form`
     letter-spacing: 0.2px;
     font-family: "Avenir Next";
 
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
+
     span {
       cursor: pointer;
       color: #01dfa5;
@@ -85,6 +100,10 @@ export const MainRegistrationForm = styled.form`
     padding: 1px 40px;
     font-size: 14px;
     font-style: normal;
+
+    @media (max-width: 812px) {
+      padding-left: 25px;
+    }
   }
 
   .newEmail {
@@ -92,11 +111,15 @@ export const MainRegistrationForm = styled.form`
     margin: 42px 40px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     border-radius: 4px;
     border: 1px solid #c9d6f0;
     background: #f5f7fa;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .newEmail::placeholder {
@@ -110,12 +133,16 @@ export const MainRegistrationForm = styled.form`
     display: flex;
     margin: 0px 41px 10px;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     padding: 1px 14px;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .newUserName::placeholder {
@@ -130,11 +157,15 @@ export const MainRegistrationForm = styled.form`
     padding: 1px 14px;
     margin: 0px 41px 10px;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .firstName::placeholder {
@@ -149,11 +180,15 @@ export const MainRegistrationForm = styled.form`
     margin: 0px 41px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     background: #f5f7fa;
     border-radius: 4px;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .lastName::placeholder {
@@ -168,11 +203,15 @@ export const MainRegistrationForm = styled.form`
     margin: 0px 41px 10px;
     padding: 1px 14px;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .newPassword::placeholder {
@@ -187,11 +226,15 @@ export const MainRegistrationForm = styled.form`
     margin: 0px 41px 10px;
     display: flex;
     height: 46px;
-    width: 75%;
+    width: 75.5%;
     border-radius: 4px;
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   .confirmPassword::placeholder {
@@ -203,42 +246,30 @@ export const MainRegistrationForm = styled.form`
 
   .lds-ring {
     display: block;
-    padding: 10px;
-    margin: 9.9px 40.7px;
-    height: 2.8vh;
-    width: 17.9vw;
+    margin: 20.9px 40.7px;
+    margin-bottom: 0px;
+    height: 47px;
+    width: 82%;
     background-color: #75ebeb;
     border-radius: 4px;
     border: 1px solid #75ebeb;
-  }
 
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    .lds-ring {
-      height: 1.7vh;
-      width: 17.5vw;
-      margin-top: 1.5vh;
-      margin-bottom: 0px;
+    @media (max-width: 812px) {
+      margin-left: 25px;
     }
   }
 
   .lds-ring div {
     box-sizing: border-box;
-    display: block;
     position: absolute;
-    margin-top: 0.5vh;
-    left: 10.8vw;
+    margin-left: 40%;
+    margin-top: 3%;
     width: 24px;
     height: 24px;
     border: 5px solid #fff;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #fff transparent transparent transparent;
-  }
-
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    .lds-ring div {
-      margin-top: 0.2vh;
-    }
   }
 
   .lds-ring div:nth-child(1) {

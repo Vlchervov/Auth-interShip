@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { axiosInstance } from "../components/Api";
 import { RegsiterInput } from "../components/RegisterInput";
-import {
-  MainRegistrationForm,
-  MainTitleRegister,
-} from "../styled-components/RegisterForm.styled";
+import { MainRegistrationForm } from "../styled-components/RegisterForm.styled";
 
 const RegisterForm = (props) => {
   const {
@@ -51,9 +48,9 @@ const RegisterForm = (props) => {
 
   return (
     <>
-      <MainTitleRegister>
+      {/* <MainTitleRegister>
         ClinicTrack<span>.</span>
-      </MainTitleRegister>
+      </MainTitleRegister> */}
       <MainRegistrationForm
         onSubmit={handleSubmit(onRegistrationUser)}
         onChange={() => {
