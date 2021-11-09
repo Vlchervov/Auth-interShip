@@ -24,6 +24,11 @@ export const AuthInput = ({ register, errors }) => {
       {errors.email?.message && <i>{errors.email?.message}</i>}
       <PasswordCheckEye>
         <input
+          style={{
+            border: errors.password?.message
+              ? "1px solid #F06060"
+              : "1px solid #c9d6f0",
+          }}
           placeholder="Пароль"
           type={type}
           {...register("password", { required: "Обязательное поле" })}
