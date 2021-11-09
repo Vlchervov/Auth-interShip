@@ -171,6 +171,12 @@ export const MainFormLogin = styled.form`
     border-radius: 50%;
     background: #fff;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+
+    @media (max-width: 812px) {
+    margin-left: 37%;
+     margin-top: 7%;
+    }
   }
 
   .lds-ellipsis div:nth-child(1) {
