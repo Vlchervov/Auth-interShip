@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const AboutAccount = styled.div`
-  position: relative;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 50.5%;
   width: 460px;
-  top: 21vh;
   border-radius: 10px;
   background: white;
   padding: 3px;

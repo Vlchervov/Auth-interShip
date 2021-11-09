@@ -11,9 +11,6 @@ export const MainTitleRegister = styled.h1`
   span {
     color: #58fa58;
   }
-  @media screen and (min-height: 1600px) and (max-width: 1460px) {
-    top: 23%;
-  }
 `;
 
 export const MainRegistrationForm = styled.form`
