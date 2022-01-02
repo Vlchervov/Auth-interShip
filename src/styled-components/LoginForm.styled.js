@@ -172,10 +172,9 @@ export const MainFormLogin = styled.form`
     background: #fff;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 
-
     @media (max-width: 812px) {
-    margin-left: 37%;
-     margin-top: 7%;
+      margin-left: 37%;
+      margin-top: 7%;
     }
   }
 
@@ -235,6 +234,10 @@ export const PasswordCheckEye = styled.div`
     background: #f5f7fa;
     border: 1px solid #c9d6f0;
     outline: none;
+
+    @media (max-width: 812px) {
+      margin-left: 25px;
+    }
   }
 
   div {
